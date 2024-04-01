@@ -35,6 +35,12 @@
   max-height: 500px;
 }
 
+.card .card-text input {
+  font-size: 18px; /* Tamaño de fuente para los campos de texto */
+  padding: 5px; /* Espacio interno alrededor del texto */
+  width: 100%; /* Ancho completo del contenedor */
+}
+
 .card .btn-actualizar {
   margin-top: 10px;
 }

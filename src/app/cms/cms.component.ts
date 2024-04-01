@@ -46,7 +46,15 @@ export class CmsComponent implements OnInit {
   recargarPagina(id: number): void {
     this.router.navigate(['/tarjeta', id]);
   }
-
-
+  irAHome(): void {
+    this.router.navigate(['/tarjetaCrear']);
+  }
+  actualizarPagina(id: number): void {
+    this.alertService.loading("¿Estás seguro de actualizar este registro?", "Actualizar").then((confirmado) => {
+      if (confirmado) {
+        this.router.navigate(['/tarjetaActualizar', id]);
+      }
+    });
+  }
 
 }

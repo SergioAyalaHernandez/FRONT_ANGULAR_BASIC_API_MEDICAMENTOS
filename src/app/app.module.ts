@@ -7,19 +7,25 @@ import { CmsComponent } from './cms/cms.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
 import { TarjetaComponent } from './tarjeta/tarjeta.component';
+import { TarjetaActualizarComponent } from './tarjeta-actualizar/tarjeta-actualizar.component';
+import {FormsModule} from "@angular/forms";
+import { TarjetaCrearComponent } from './tarjeta-crear/tarjeta-crear.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CmsComponent,
-    TarjetaComponent
+    TarjetaComponent,
+    TarjetaActualizarComponent,
+    TarjetaCrearComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
-.titulo{
+
+
+.titulo {
   flex-direction: row;
   text-align: center;
   padding-top: 2%;
@@ -7,8 +9,10 @@
 .completo {
   padding: 4% 4% 8% 4%;
   flex-direction: row;
+  overflow-x: auto;
 }
-.titulos{
+
+.titulos {
   text-align: center;
 }
 
@@ -18,43 +22,51 @@ table {
   font-size: 25px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
-.botones{
+
+.url-column {
+  max-width: 250px;
+}
+
+.botones {
   width: 17%;
 }
 
 th, td {
   border: 1px solid #dddddd;
   padding: 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 th {
   background-color: #f2f2f2;
 }
 
-.btn-actualizar {
+.btn-actualizar,
+.btn-eliminar, .btn-Crear {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  font-size: 25px;
-  min-width: 70px;
-  padding: 2%;
-  margin-right: 5px;
+  font-size: 18px; /* Cambia el tamaño de fuente de los botones */
+  min-width: 100px; /* Ajusta el ancho mínimo de los botones */
+  padding: 10px 15px; /* Ajusta el padding de los botones */
+  margin: 5px; /* Añade un margen entre los botones */
   cursor: pointer;
-  background-color: #3af603;
-  color: #fff;
   border: none;
   border-radius: 3px;
 }
 
+.btn-actualizar {
+  background-color: #3af603;
+  color: #fff;
+}
+
 .btn-eliminar {
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  font-size: 25px;
-  min-width: 70px;
-  padding: 2%;
-  margin-right: 5px;
-  cursor: pointer;
   background-color: #ff0000;
   color: #fff;
-  border: none;
-  border-radius: 3px;
+}
+.btn-Crear {
+  background-color: #0720c7;
+  color: #fff;
 }
 
 button:hover {
@@ -66,30 +78,27 @@ button:focus {
   outline: none;
 }
 
-
-
-
 @media screen and (max-width: 768px) {
   .completo {
-    padding: 2%;
+    width: 90%;
+    height: 100%;
   }
 
   table {
-    font-size: 10px;
+    font-size: 12px;
+
+  }
+  .url-column {
+    display: none;
   }
 
   th, td {
-    padding: 6px;
   }
 
-  .btn-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  button {
-    font-size: 10px;
-    margin-right: 0;
-    margin-bottom: 5px;
+  .btn-actualizar,
+  .btn-eliminar {
+    font-size: 10px; /* Ajusta el tamaño de fuente de los botones para dispositivos móviles */
+    min-width: 40px; /* Ajusta el ancho mínimo de los botones para dispositivos móviles */
+    padding: 8px 12px; /* Ajusta el padding de los botones para dispositivos móviles */
   }
 }
